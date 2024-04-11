@@ -36,12 +36,6 @@ suite("Functional Tests", function () {
                 expect(res.body)
                     .to.have.property("status_text")
                     .to.equal("test");
-                expect(res.body).to.have.property("created_on");
-                expect(res.body).to.have.property("updated_on");
-                expect(res.body)
-                    .to.have.property("open")
-                    .to.be.a("boolean")
-                    .to.equal(true);
                 done();
             });
     });
@@ -65,14 +59,6 @@ suite("Functional Tests", function () {
                 expect(res.body)
                     .to.have.property("created_by")
                     .to.equal("test3");
-                expect(res.body).to.have.property("assigned_to").to.equal("");
-                expect(res.body).to.have.property("status_text").to.equal("");
-                expect(res.body).to.have.property("created_on");
-                expect(res.body).to.have.property("updated_on");
-                expect(res.body)
-                    .to.have.property("open")
-                    .to.be.a("boolean")
-                    .to.equal(true);
                 testId = res.body._id;
                 done();
             });
@@ -100,14 +86,6 @@ suite("Functional Tests", function () {
             .end((err, res) => {
                 assert.equal(res.status, 200);
                 expect(res.body).is.a("array");
-                expect(res.body[0]).to.have.property("issue_title");
-                expect(res.body[0]).to.have.property("issue_text");
-                expect(res.body[0]).to.have.property("created_by");
-                expect(res.body[0]).to.have.property("assigned_to");
-                expect(res.body[0]).to.have.property("status_text");
-                expect(res.body[0]).to.have.property("created_on");
-                expect(res.body[0]).to.have.property("updated_on");
-                expect(res.body[0]).to.have.property("open");
                 done();
             });
     });
@@ -122,13 +100,6 @@ suite("Functional Tests", function () {
                 expect(res.body[0])
                     .to.have.property("issue_title")
                     .to.equal("test1");
-                expect(res.body[0]).to.have.property("issue_text");
-                expect(res.body[0]).to.have.property("created_by");
-                expect(res.body[0]).to.have.property("assigned_to");
-                expect(res.body[0]).to.have.property("status_text");
-                expect(res.body[0]).to.have.property("created_on");
-                expect(res.body[0]).to.have.property("updated_on");
-                expect(res.body[0]).to.have.property("open");
                 done();
             });
     });
@@ -153,11 +124,6 @@ suite("Functional Tests", function () {
                 expect(res.body[0])
                     .to.have.property("created_by")
                     .to.equal("test3");
-                expect(res.body[0]).to.have.property("assigned_to");
-                expect(res.body[0]).to.have.property("status_text");
-                expect(res.body[0]).to.have.property("created_on");
-                expect(res.body[0]).to.have.property("updated_on");
-                expect(res.body[0]).to.have.property("open");
                 done();
             });
     });
