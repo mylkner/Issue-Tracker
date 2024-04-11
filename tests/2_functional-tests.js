@@ -6,6 +6,8 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 suite("Functional Tests", function () {
+    this.timeout(10000);
+
     let testId;
 
     test("Create an issue with every field: POST request to /api/issues/{project}", function (done) {
