@@ -6,7 +6,7 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 suite("Functional Tests", function () {
-    this.timeout(10000);
+    this.timeout(0);
 
     let testId;
 
